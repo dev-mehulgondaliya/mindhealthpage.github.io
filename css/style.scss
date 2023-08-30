@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  user-select: none;
+}
+body {
+  width: 100vw;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+
+// some veriable
+$primary-color : #6FB1D4;
+$secondry-color : #AEC9E0;
+$third-color : #28363f;
+
+$text-black : #000;
+$text-gray : #D3D3D3;
+
+// scrollbar
+::-webkit-scrollbar{
+  display: none
+}
+
+// comman CSS
+h2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+h2::after{
+  content: "";
+  width: 100px;
+  height: 5px;
+  background-color: $primary-color;
+
+}
+
+
+
+// some import scss file
+@import 'header.scss';
+@import 'appoinment.scss';
+@import 'testimonial.scss';
+@import 'fassistment.scss';
+@import 'article.scss';
+@import 'footer.scss';

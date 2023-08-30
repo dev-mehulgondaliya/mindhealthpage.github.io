@@ -1,0 +1,46 @@
+.fassistment {
+  width: 100%;
+  height: 100%;
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+
+    .asgmtCard{
+        width: 200px;
+        height: 300px;
+        background-color: $primary-color;
+        position: relative;
+        border: $text-gray;
+        border-radius: 0 0 10px 10px;
+
+        img{
+            width: 80%;
+        }
+
+        &::before{
+            content: "";
+            width: 100%;
+            height: 10px;
+            background-color: $secondry-color;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .agmntbtn{
+          background-color: $third-color;
+          color: #ffff;
+
+          &:hover{
+            background-color: $secondry-color;
+          }
+        }
+    }
+  }
+}

@@ -1,0 +1,556 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+body {
+  width: 100vw;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+h2::after {
+  content: "";
+  width: 100px;
+  height: 5px;
+  background-color: #6FB1D4;
+}
+
+nav {
+  width: 100%;
+  box-shadow: 0 0 5px #000;
+}
+nav .brand_img {
+  width: 180px;
+}
+
+.nav-link {
+  transition: color 0.5s;
+  padding-bottom: 5px;
+}
+.nav-link:hover {
+  color: #6FB1D4;
+  border-bottom: 2px solid #6FB1D4;
+}
+
+img[alt=Poster1], img[alt=Poster2] {
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+
+#carouselExampleFade::after {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.headder-text {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  text-align: right;
+  right: 8vmin;
+  color: white;
+}
+.headder-text a {
+  background-color: #6FB1D4;
+}
+.headder-text a:hover {
+  background-color: #AEC9E0;
+}
+
+.hidemenu {
+  display: none;
+}
+
+.ri-menu-3-line {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .mainnav {
+    justify-content: start !important;
+  }
+  .ri-menu-3-line {
+    display: block;
+  }
+}
+.accordion-button {
+  background-color: #AEC9E0;
+}
+
+.accordion-button:not(.collapsed) {
+  box-shadow: none;
+  background-color: #AEC9E0;
+}
+
+.accordion-body {
+  background: url(../images/bgbooksection.svg) no-repeat;
+  height: 400px;
+  overflow: scroll;
+}
+
+.bookSwiper {
+  height: 350px;
+  width: 70% !important;
+  float: right;
+}
+
+.swiper-slide {
+  background: none !important;
+}
+
+.counsellor_details {
+  align-self: flex-start;
+}
+
+.morebtn {
+  background-color: #6FB1D4;
+}
+.morebtn:hover {
+  background-color: #AEC9E0;
+}
+
+.detailsbtn {
+  background-color: #AEC9E0;
+}
+.detailsbtn:hover {
+  background-color: #6FB1D4;
+}
+
+.card-wrapper {
+  position: relative;
+}
+.card-wrapper .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 300px;
+  border-radius: 16px;
+  transition: 0.2s;
+  cursor: pointer;
+  overflow: hidden;
+}
+.card-wrapper .card .card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: #000;
+  width: 100%;
+  height: 100%;
+}
+.card-wrapper .card .card-image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  width: 100%;
+  height: 100%;
+}
+.card-wrapper .card .details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #6FB1D4;
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+}
+.card-wrapper .card .details h3 {
+  padding: 0;
+  font-size: 1rem;
+  background-color: #fff;
+}
+.card-wrapper .card .details h3 .job-title {
+  font-size: 1rem;
+  line-height: 2rem;
+  font-weight: 500;
+  background-color: #AEC9E0;
+  display: block;
+}
+.card-wrapper .card:hover img {
+  opacity: 0.6;
+  transition: 0.5s;
+}
+.card-wrapper .card:hover .card-image {
+  transform: translateY(-20%);
+  transition: all 0.9s;
+}
+.card-wrapper .card:hover .social-icons li a {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.card-wrapper .card:hover .social-icons li:nth-child(1) a {
+  transition-delay: 0.1s;
+}
+.card-wrapper .card:hover .social-icons li:nth-child(2) a {
+  transition-delay: 0.2s;
+}
+.card-wrapper .card:hover .social-icons li:nth-child(3) a {
+  transition-delay: 0.3s;
+}
+.card-wrapper .card:hover .social-icons li:nth-child(4) a {
+  transition-delay: 0.4s;
+}
+
+@media (max-width: 768px) {
+  .card-wrapper {
+    width: 90%;
+  }
+  .bookSwiper {
+    height: 350px;
+    width: 100% !important;
+    background-color: white;
+  }
+}
+@media (max-width: 480px) {
+  .card-wrapper .card {
+    width: 150px;
+    height: 200px;
+  }
+  .bookSwiper {
+    height: 250px;
+  }
+  .accordion-body {
+    height: 300px;
+    background: none;
+  }
+  .accordion-body h6 {
+    font-size: 0.6rem;
+  }
+  .accordion-body .detailsbtn {
+    font-size: 0.6rem;
+  }
+  .card-wrapper .card .details h3,
+  .card-wrapper .card .details h3 .job-title {
+    font-size: 0.8rem;
+    background-color: #fff;
+  }
+  .card:hover .card-image {
+    transform: translateY(-40%);
+    transition: all 0.9s;
+  }
+}
+.swiper {
+  width: 100%;
+}
+
+.swiper-slide {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 430 !important;
+  padding: 0 30px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #6FB1D4;
+}
+
+.wrapper {
+  width: 400px;
+  height: 200px;
+  display: table;
+  border: 5px solid #111;
+  margin: 50px auto;
+  padding: 20px;
+  position: relative;
+}
+.wrapper:after, .wrapper:before {
+  content: "";
+  position: absolute;
+  font-family: fontAwesome;
+  font-size: 50px;
+  color: #111;
+  background: #fff;
+}
+.wrapper:after {
+  content: "\f10d";
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  box-shadow: 10px 10px 0 #fff;
+}
+.wrapper:before {
+  content: "\f10e";
+  bottom: 0;
+  right: 0;
+  transform: translate(50%, 50%);
+  box-shadow: -10px -10px 0 #fff;
+}
+
+.title,
+.description {
+  display: table-cell;
+  width: 50%;
+  vertical-align: middle;
+}
+
+.description {
+  font-size: 14px;
+}
+
+.title {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0 20px 0 20px;
+}
+.title small {
+  display: block;
+  font-size: 20px;
+  text-align: right;
+}
+
+.border-radius {
+  border-radius: 30px;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.fassistment {
+  width: 100%;
+  height: 100%;
+}
+.fassistment .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+.fassistment .swiper-slide .asgmtCard {
+  width: 200px;
+  height: 300px;
+  background-color: #6FB1D4;
+  position: relative;
+  border: #D3D3D3;
+  border-radius: 0 0 10px 10px;
+}
+.fassistment .swiper-slide .asgmtCard img {
+  width: 80%;
+}
+.fassistment .swiper-slide .asgmtCard::before {
+  content: "";
+  width: 100%;
+  height: 10px;
+  background-color: #AEC9E0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.fassistment .swiper-slide .asgmtCard .agmntbtn {
+  background-color: #28363f;
+  color: white;
+}
+.fassistment .swiper-slide .asgmtCard .agmntbtn:hover {
+  background-color: #AEC9E0;
+}
+
+.readmorebtn {
+  background-color: #6FB1D4;
+}
+.readmorebtn:hover {
+  background-color: #28363f;
+  color: #fff;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: #28363f;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: -3px;
+}
+
+/* Container around content */
+.timeline-box {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+/* Place the container to the left */
+.left {
+  left: 0;
+  border: 1px solid #28363f;
+  border-right: none;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+  border: 1px solid #28363f;
+  border-left: none;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+  /* Full-width containers */
+  .timeline-box {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  /* Make sure that all arrows are pointing leftwards */
+  .timeline-box::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  /* Make sure all circles are at the same spot */
+  .left::after,
+  .right::after {
+    left: 15px;
+  }
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+footer {
+  background-color: #28363f;
+}
+
+.footerlabel {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footerlabel::after {
+  content: "";
+  width: 300px;
+  height: 2px;
+  background: #fff;
+}
+
+.footerlabel ~ ul {
+  row-gap: 5px;
+  flex-wrap: wrap;
+}
+
+.footerlabel ~ ul li {
+  border-right: 1px solid #AEC9E0;
+  padding: 0 10px;
+  transition: 0.5s;
+}
+.footerlabel ~ ul li:hover {
+  color: #6FB1D4;
+}
+
+.footerlabel ~ ul li:last-child {
+  border: none;
+}
+
+.copyright {
+  background-color: #6FB1D4;
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .footerlabel ~ ul {
+    gap: 5px;
+  }
+  .footerlabel ~ ul li {
+    border: 1px solid #AEC9E0;
+  }
+  .footerlabel ~ ul li:last-child {
+    border: 1px solid #AEC9E0;
+  }
+}/*# sourceMappingURL=style.css.map */

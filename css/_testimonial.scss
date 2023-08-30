@@ -1,0 +1,82 @@
+// swiper
+.swiper {
+  width: 100%;
+}
+
+.swiper-slide {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 430 !important;
+  padding: 0 30px;
+
+}
+
+.swiper-pagination-bullet-active{
+    background-color: $primary-color;
+}
+
+// inner of swiper
+.wrapper {
+  width: 400px;
+  height: 200px;
+  display: table;
+  border: 5px solid #111;
+  margin: 50px auto;
+  padding: 20px;
+  position: relative;
+
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    font-family: fontAwesome;
+    font-size: 50px;
+    color: #111;
+    background: #fff;
+  }
+  &:after {
+    content: "\f10d";
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    box-shadow: 10px 10px 0 #fff;
+  }
+  &:before {
+    content: "\f10e";
+    bottom: 0;
+    right: 0;
+    transform: translate(50%, 50%);
+    box-shadow: -10px -10px 0 #fff;
+  }
+}
+
+.title,
+.description {
+  display: table-cell;
+  width: 50%;
+  vertical-align: middle;
+}
+.description {
+  font-size: 14px;
+}
+.title {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0 20px 0 20px;
+
+  small {
+    display: block;
+    font-size: 20px;
+    text-align: right;
+  }
+}
+.border-radius {
+  border-radius: 30px;
+}
+.text-right {
+  text-align: right;
+}
